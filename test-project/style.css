@@ -6,7 +6,6 @@
 }
 
 .header {
-  margin-bottom: 150px;
   top: 0;
   left: 0;
   width: 1280px;
@@ -263,7 +262,7 @@ body {
   inset: 0;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 50px;
-  z-index: 9999;
+  z-index: 10000;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -292,8 +291,7 @@ body {
 
 .cart-modal__info {
   border: 1px solid #f3f2f8;
-  padding: 200px;
-  padding-top: 350px;
+  padding: 350px 200px 200px;
   margin-bottom: 20px;
   width: 100%;
   background-image: url('img/cart-removebg-preview.png');
