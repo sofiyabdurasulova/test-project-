@@ -13,20 +13,27 @@
 </head>
 
 <body>
-  <main class="container container__background">
-    <h1 class="container__main-title">Выбери свой продукт</h1>
 
+
+  <main class="container">
+    <header class="header">
+      <div class="header__buttons">
+        <button class="header__burger-menu"><i class="fa-solid fa-bars"></i></button>
+        <button class="header__cart-button"><i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+    </header>
+    <h1 class="container__main-title">Выбери свой продукт</h1>
     <div class="container__cards">
       <div class="card card-sale">
         <span class="card__sale">-50%</span>
         <img class="card__img" src="img/photo-mousse.jpg" alt="Увлажняющий мусс">
         <div class="card__rating">
           <span class="card__rating-number">3.5</span>
-          <span class="card__rating-stars"><i class="fa-solid fa-star"></i></span>
-          <span class="card__rating-stars"><i class="fa-solid fa-star"></i></span>
-          <span class="card__rating-stars"><i class="fa-solid fa-star-half-stroke"></i></span>
-          <span class="card__rating-stars"><i class="fa-regular fa-star"></i></span>
-          <span class="card__stars"><i class="fa-solid fa-star"></i></span>
+          <span class="card__stars"><i class="fa-solid fa-star rating-star"></i></span>
+          <span class="card__stars"><i class="fa-solid fa-star rating-star"></i></span>
+          <span class="card__stars"><i class="fa-solid fa-star-half-stroke rating-star"></i></span>
+          <span class="card__stars"><i class="fa-regular fa-star rating-star"></i></span>
+          <span class="card__stars"><i class="fa-solid fa-star rating-star"></i></span>
         </div>
 
         <span class="card__skin-type">для нормальной кожи</span>
@@ -52,13 +59,13 @@
         <img class="card__img" src="img/photo-mask.jpg" alt="Увлажняющая маска">
         <div class="card__rating">
           <span class="card__rating-number">4.5</span>
-          <span class="card__rating-stars"><i class="fa-solid fa-star"></i></span>
-          <span class="card__rating-stars"><i class="fa-solid fa-star"></i></span>
-          <span class="card__rating-stars"><i class="fa-solid fa-star-half-stroke"></i></span>
+          <span class="card__stars"><i class="fa-solid fa-star rating-star"></i></span>
+          <span class="card__stars"><i class="fa-solid fa-star rating-star"></i></span>
+          <span class="card__stars"><i class="fa-solid fa-star rating-star"></i></span>
+          <span class="card__stars"><i class="fa-solid fa-star rating-star"></i></span>
+          <span class="card__stars"><i class="fa-solid fa-star-half-stroke rating-star"></i></span>
         </div>
-        <span class="card__stars"><i class="fa-solid fa-star"></i></span>
         <span class="card__skin-type">для нормальной кожи</span>
-        <span class="card__stars"><i class="fa-solid fa-star"></i></span>
         <h2 class="card__title">Увлажняющая маска</h2>
         <p class="card__description">Способствует удерживанию влаги в верхних слоях кожи.</p>
         <span class="card__composition">Состав:</span>
@@ -81,11 +88,11 @@
         <img class="card__img" src="img/photo-gel.jpg" alt="Гель для умывания">
         <div class="card__rating">
           <span class="card__rating-number">3.0</span>
-          <span class="card__stars"><i class="fa-solid fa-star"></i></span>
-          <span class="card__stars"><i class="fa-solid fa-star"></i></span>
-          <span class="card__stars"><i class="fa-regular fa-star"></i></span>
-          <span class="card__stars"><i class="fa-regular fa-star"></i></span>
-          <span class="card__stars"><i class="fa-solid fa-star"></i></span>
+          <span class="card__stars"><i class="fa-solid fa-star rating-star"></i></span>
+          <span class="card__stars"><i class="fa-solid fa-star rating-star"></i></span>
+          <span class="card__stars"><i class="fa-regular fa-star rating-star"></i></span>
+          <span class="card__stars"><i class="fa-regular fa-star rating-star"></i></span>
+          <span class="card__stars"><i class="fa-solid fa-star rating-star"></i></span>
         </div>
         <span class="card__skin-type">для нормальной кожи</span>
         <h2 class="card__title">Гель для умывания</h2>
@@ -110,11 +117,11 @@
         <img class="card__img" src="img/photo-set-1.jpg" alt="Подарочный набор №1">
         <div class="card__rating">
           <span class="card__rating-number">5.0</span>
-          <span class="card__stars"><i class="fa-solid fa-star"></i></span>
-          <span class="card__stars"><i class="fa-solid fa-star"></i></span>
-          <span class="card__stars"><i class="fa-solid fa-star"></i></span>
-          <span class="card__stars"><i class="fa-solid fa-star"></i></span>
-          <span class="card__stars"><i class="fa-solid fa-star"></i></span>
+          <span class="card__stars"><i class="fa-solid fa-star rating-star"></i></span>
+          <span class="card__stars"><i class="fa-solid fa-star rating-star"></i></span>
+          <span class="card__stars"><i class="fa-solid fa-star rating-star"></i></span>
+          <span class="card__stars"><i class="fa-solid fa-star rating-star"></i></span>
+          <span class="card__stars"><i class="fa-solid fa-star rating-star"></i></span>
         </div>
         <span class="card__skin-type">для нормальной кожи</span>
         <h2 class="card__title">Подарочный набор №1</h2>
@@ -139,15 +146,16 @@
         <img class="card__img" src="img/photo-set-5.jpg" alt="Подарочный набор №5">
         <div class="card__rating">
           <span class="card__rating-number">2.5</span>
-          <span class="card__stars"><i class="fa-solid fa-star"></i></span>
-          <span class="card__stars"><i class="fa-solid fa-star"></i></span>
-          <span class="card__stars"><i class="fa-solid fa-star-half-stroke"></i></span>
-          <span class="card__stars"><i class="fa-regular fa-star"></i></span>
-          <span class="card__stars"><i class="fa-regular fa-star"></i></span>
+          <span class="card__stars"><i class="fa-solid fa-star rating-star"></i></span>
+          <span class="card__stars"><i class="fa-solid fa-star rating-star"></i></span>
+          <span class="card__stars"><i class="fa-solid fa-star-half-stroke rating-star"></i></span>
+          <span class="card__stars"><i class="fa-regular fa-star rating-star"></i></span>
+          <span class="card__stars"><i class="fa-regular fa-star rating-star"></i></span>
         </div>
         <span class="card__skin-type">для нормальной кожи</span>
         <h2 class="card__title">Подарочный набор №5</h2>
-        <p class="card__description"> Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.</p>
+        <p class="card__description"> Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.
+        </p>
         <span class="card__composition">Состав:</span>
         <ul class="card__list">
           <li class="card__item">воски</li>
@@ -166,6 +174,23 @@
       </div>
     </div>
   </main>
+  <main class="container">
+    <div class="cart-modal hidden">
+      <div class="cart-modal__content">
+        <h2 class="cart-modal__title">Корзина</h2>
+        <div class="cart-modal__items">
+        </div>
+        <div class="cart-modal__info">
+          <!-- <img class="cart-modal__image" src="img/cart-removebg-preview.png" alt="Корзина пуста"> -->
+          <h3 class="cart-modal__subtitle">Ваша корзина пуста</h3>
+          <p class="cart-modal__text">Похоже, вы пока ничего не добавили.</p>
+          <p class="cart-modal__text">Перейдите в каталог и найдите что-то особенное для себя.</p>
+          <button class="cart-modal__button">Перейти в каталог</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="product.js"></script>
 </body>
 
 </html>
