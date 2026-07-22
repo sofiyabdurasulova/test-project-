@@ -10,13 +10,13 @@ addToCartButtons.forEach(function (button) {
     console.log("Товар добавлен в корзину:", { name: productName, price: productPrice, image: productImage });
   });
 });
-const cartModalEmpty = document.querySelector('.cart-modal__empty');
+const cartModalInfo = document.querySelector('.cart-modal__info');
 const cartModalItems = document.querySelector('.cart-modal__items');
 if (cart.length === 0) {
-  cartModalEmpty.style.display = "flex"; // показать пустую корзину
+  cartModalInfo.style.display = "flex"; // показать пустую корзину
   cartModalItems.style.display = "none";
 } else {
-  cartModalEmpty.style.display = "none"; // скрыть пустую корзину
+  cartModalInfo.style.display = "none"; // скрыть пустую корзину
   cartModalItems.style.display = "block";
 }
 cart.forEach(function (item) {
@@ -28,9 +28,9 @@ cart.forEach(function (item) {
   <div class="cart-modal__item-price">${item.price}</div>
   <button class="cart-modal__remove"><i class="fa-solid fa-trash"></i></button>
 `;
-  cartItems.appendChild(cartItem);
+  cartModalItems.appendChild(cartItem);
   cartItem.style.border = "2px solid red";
-  console.log(cartItems.innerHTML);
+  console.log(cartModalItems.innerHTML);
   console.log("Товар отображен в корзине:", item);
 });
 const cartButton = document.querySelector('.header__cart-button');
@@ -48,8 +48,8 @@ catalogButton.addEventListener('click', function () {
   containerCards.scrollIntoView({ behavior: 'smooth' });
   console.log("Переход к каталогу товаров.");
 });
-const cartModalEmptyRemove = document.querySelector('.cart-modal__empty-remove');
-cartModalEmptyRemove.addEventListener('click', function () {
-  const card = document.querySelector('.card');
-  console.log(containerCards);
-});
+//const cartModalEmptyRemove = document.querySelector('.cart-modal__empty-remove');
+//cartModalEmptyRemove.addEventListener('click', function () {
+//const card = document.querySelector('.card');
+//console.log('card');
+//});
