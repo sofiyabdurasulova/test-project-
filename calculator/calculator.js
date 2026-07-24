@@ -1,43 +1,65 @@
 const display = document.querySelector('.calculator-display');
-const buttons = document.querySelectorAll('.number');
-const operators = document.querySelectorAll('.operator');
-const equal = document.querySelector('.equal');
-const deleteBtn = document.querySelector('.delete')
-let a = "";
-let b = "";
-let operator = "";
+const numberBtns = document.querySelectorAll('.number');
+const operatorsBtn = document.querySelectorAll('.operator');
+const equalBtn = document.querySelector('.equal');
+const deleteBtn = document.querySelector('.delete');
+let fristNumber = "";
+let secondNumber = "";
+let mathOperator = "";
 let result = "";
-buttons.forEach(function (button) {
+let afterResult = false;
+numberBtns.forEach(function (button) {
   button.addEventListener('click', function () {
-    display.value += button.textContent.trim()
+    let number = button.textContent.trim();
+    if (afterResult === true) {
+      fristNumber = "";
+      secondNumber = "";
+      mathOperator = "";
+      display.value = "";
+      afterResult = false;
+
+    };
+    if (mathOperator === "") {
+      fristNumber += number;
+    } else {
+      secondNumber += number;
+    }
+    display.value = fristNumber + mathOperator + secondNumber;
   });
 });
-operators.forEach(function (btn) {
+operatorsBtn.forEach(function (btn) {
   btn.addEventListener('click', function () {
-    a = display.value;
-    operator = btn.textContent.trim();
-    display.value = "";
+    if (afterResult === true) {
+      fristNumber = String(result);
+      secondNumber = "";
+      afterResult = false;
+    }
+    mathOperator = btn.textContent.trim();
+    display.value = fristNumber + mathOperator;
   });
 });
 
-equal.addEventListener('click', function () {
-  b = display.value;
-  switch (operator) {
+equalBtn.addEventListener('click', function () {
+  switch (mathOperator) {
     case '+':
-      result = Number(a) + Number(b);
+      result = Number(fristNumber) + Number(secondNumber);
       break;
     case '-':
-      result = Number(a) - Number(b);
+      result = Number(fristNumber) - Number(secondNumber);
       break;
     case '*':
-      result = Number(a) * Number(b);
+      result = Number(fristNumber) * Number(secondNumber);
       break;
     case '/':
-      result = Number(a) / Number(b);
+      result = Number(fristNumber) / Number(secondNumber);
       break;
   };
-  display.value = result
+  display.value = result;
+  afterResult = true;
 });
 deleteBtn.addEventListener('click', function () {
   display.value = "";
+  fristNumber = "";
+  secondNumber = "";
+  mathOperator = "";
 });
